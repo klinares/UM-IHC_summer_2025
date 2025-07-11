@@ -36,8 +36,8 @@ client_claude <- chat_anthropic(system_prompt,
 ollamar::list_models()
 
 # llama4 and 3 are too large
-client_llama <- chat_ollama(system_prompt, model = "llama3.2")
-client_gemma <- chat_ollama(system_prompt = system_prompt , model = "gemma")
+client_llama <- chat_ollama(system_prompt, model = "llama3.3")
+client_gemma <- chat_ollama(system_prompt = system_prompt , model = "gemma3")
 
 # ask the LLM to do so something
 string_question <- "Summarize this article in few sentences with an empahsizes on research design."
@@ -56,10 +56,7 @@ client_llama$chat(string_question, article)
 client_gemma$chat(string_question, article)
 
 
-
-
-
-
-
+# reddit test
+client_llama <- chat_ollama( model = "llama3.3")
 
 
